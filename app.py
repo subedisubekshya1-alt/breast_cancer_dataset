@@ -30,6 +30,6 @@ inputs = [cols[i % 3].number_input(f, min_value=0.0, value=0.0, step=0.0001, for
 
 if st.button("Predict Diagnosis", use_container_width=True):
     pred = model.predict(scaler.transform(np.array([inputs])))[0]
-    bg, label = ("#FFCDD2", "True positive (M)") if pred == 1 else ("#FFFFFF", "False negative (B)")
+    bg, label = ("#FFCDD2", "True (M)") if pred == 1 else ("#FFFFFF", "False (B)")
     st.markdown(f"<div class='box' style='background:{bg};'>Result: {label}</div>", unsafe_allow_html=True)
 
