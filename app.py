@@ -12,7 +12,8 @@ div.stButton > button {background-color: #FF8A80 !important; color: #0B2545 !imp
 .box {padding: 16px; border-radius: 10px; font-size: 20px; font-weight: bold; text-align: center; border: 2px solid #0B2545;}
 </style>""", unsafe_allow_html=True)
 
-model, scaler = joblib.load("model.pkl"), joblib.load("scaler.pkl")
+model= joblib.load("model.pkl")
+scaler= joblib.load("scaler.pkl")
 
 st.markdown("<h1 style='text-align:center;'>Breast Cancer Prediction</h1><p style='text-align:center;'>Enter your measurements in the cells below.</p>", unsafe_allow_html=True)
 
